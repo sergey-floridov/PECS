@@ -4,7 +4,7 @@ package org.example;
  *
  */
 public class FelisCatus extends Felidae{
-    void test4(){
+    void test5(){
         System.out.println("Котики прекрасны");
     }
 }

@@ -2,10 +2,10 @@ package org.example;
 
 
 /* Животные - Animal
-*  Млекопитающие - Mammalia
-*  Хищные - Carnivora
-*  Кошачьи - Felidae
-*  Кошка - FelisCatus
+*  Млекопитающие - Mammalia(2)
+*  Хищные - Carnivora(3)
+*  Кошачьи - Felidae(4)
+*  Кошка - FelisCatus(5)
 */
 public class Animal {
     void test(){
