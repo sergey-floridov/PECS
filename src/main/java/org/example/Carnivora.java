@@ -5,7 +5,8 @@ package org.example;
  *
  */
 public class Carnivora extends Mammalia{
-    void test3(){
-        System.out.println("Я ем мясо");
+    protected Object test3(String meat) throws Exception{
+        System.out.println("Я ем мясо " + meat);
+        return null;
     }
 }

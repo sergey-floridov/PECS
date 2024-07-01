@@ -14,21 +14,42 @@ public class App {
         List<FelisCatus> cats = new ArrayList<>();
         List<FelisCatus> cats2 = new ArrayList<>();
 
-
+//-----------------------------------------------------
 
 //      Что можно добавлять в разные листы? (ковариантность)
-        felidaes.add(new FelisCatus());
-//        felidaes.add(new Animal());  // сломаем следующий код
-//        felidaes.forEach(x-> x.test4());
+//        felidaes.add(new FelisCatus());
+//        felidaes.add(new Animal());  // что случится со следующим кодом?
+
+        felidaes.forEach(x-> x.test4());
+        Animal felidae = felidaes.get(0);
+//------------------------------------------------------------
 
 //        пример инвариантности
-//        animals = cats2;
+//        animals = cats2;  //compilation error
+//        cats = mammalias; //compilation error
+        cats = cats2;     // без ошибок
+
+
+// ----------------------------------------------------------
+
+        String[] strings = new String[1];
+        Object[] objects = new Object[1];
+
+//        strings = objects;     //массивы в java ?
+//        objects = strings;
+//-----------------------------------------------------------------
 
 //       проверяем возможность добавления листов разных классов
         processUpperBounded(cats);
+        processUpperBounded(felidaes);
+        processUpperBounded(carnivoras);
+//        processUpperBounded(animals);   //compilation error
 
 //        проверяем возможность добавления листов разных классов
+        processLowerBounded(animals);
+        processLowerBounded(mammalias);
         processLowerBounded(carnivoras);
+//        processLowerBounded(felidaes);  //compilation error
     }
 
 
@@ -40,7 +61,7 @@ public class App {
 //        carnivoras.add(new Carnivora());//compilation error
         carnivoras.add(null);  // в такую коллекцию мы можем добавлять элементы типа null
         Carnivora carnivora = carnivoras.get(0);  // Тип переменной Carnivora или родители
-        carnivora.test3();
+//        carnivora.test3();
     }
 
 
