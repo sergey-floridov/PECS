@@ -6,7 +6,7 @@ package org.example;
 public class Felidae extends Carnivora{
 
     @Override
-    public String test3(String o) throws IllegalArgumentException{
+    public String test3(String o){
         return null;
     }
     void test4(){

@@ -8,6 +8,16 @@ package org.example;
 *  Кошка - FelisCatus(5)
 */
 public class Animal {
+
+    public String name;
+
+    public Animal(String name){
+        this.name = name;
+    }
+
+    public Animal(){
+    }
+
     void test(){
         System.out.println("Я дышу");
     }

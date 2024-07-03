@@ -17,7 +17,7 @@ public class App {
 //-----------------------------------------------------
 
 //      Что можно добавлять в разные листы? (ковариантность)
-//        felidaes.add(new FelisCatus());
+        felidaes.add(new FelisCatus());
 //        felidaes.add(new Animal());  // что случится со следующим кодом?
 
         felidaes.forEach(x-> x.test4());
@@ -36,7 +36,7 @@ public class App {
         Object[] objects = new Object[1];
 
 //        strings = objects;     //массивы в java ?
-//        objects = strings;
+        objects = strings;
 //-----------------------------------------------------------------
 
 //       проверяем возможность добавления листов разных классов
@@ -61,7 +61,7 @@ public class App {
 //        carnivoras.add(new Carnivora());//compilation error
         carnivoras.add(null);  // в такую коллекцию мы можем добавлять элементы типа null
         Carnivora carnivora = carnivoras.get(0);  // Тип переменной Carnivora или родители
-//        carnivora.test3();
+//        carnivora.test3("Мясо");
     }
 
 
