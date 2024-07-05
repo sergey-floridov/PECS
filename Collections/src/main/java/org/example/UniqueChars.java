@@ -16,17 +16,17 @@ public class UniqueChars {
         this.text = text;
     }
 
-//    public void calculate() {
-//        for (char c : text.toCharArray()) {
-//            if (Character.isLetter(c)) {
-//                if () {
-//
-//                } else {
-//
-//                }
-//            }
-//        }
-//    }
+    public void calculate() {
+        for (char c : text.toCharArray()) {
+            if (Character.isLetter(c)) {
+                if (map.containsKey(c)) {
+                    map.put(c, map.get(c)+1);
+                } else {
+                    map.put(c, 1);
+                }
+            }
+        }
+    }
 
     @Override
     public String toString() {

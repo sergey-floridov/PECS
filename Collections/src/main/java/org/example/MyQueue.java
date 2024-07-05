@@ -7,10 +7,10 @@ public class MyQueue {
 
 //  FIFO или LIFO?
     public void put(Object o){
-
+        list.addLast(o);
     }
 
     public Object get(){
-        return null;
+        return list.removeFirst();
     }
 }

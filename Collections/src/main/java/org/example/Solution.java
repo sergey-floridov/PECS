@@ -8,6 +8,9 @@ public class Solution {
         String str1 = "Hello world!";
         String str2 = new String("Hello world!");
 
+        str2.intern();
+        boolean b = str1 == str2;
+        System.out.println(b);
         Set<String> set = new HashSet<>();
         set.add(str1);
         set.add(str2);
@@ -69,12 +72,12 @@ public class Solution {
         }
         System.out.println();
 
-        spliter.forEachRemaining(System.out::print);
-//        Spliterator<String> secondSpliterator = spliter.trySplit();
-//        if (secondSpliterator != null) {
-//            secondSpliterator.forEachRemaining(System.out::println);
-//        }
-        System.out.println();
+//        spliter.forEachRemaining(System.out::print);
+////        Spliterator<String> secondSpliterator = spliter.trySplit();
+////        if (secondSpliterator != null) {
+////            secondSpliterator.forEachRemaining(System.out::println);
+////        }
+//        System.out.println();
 
         // Изменяем объекты и добавляем
         ListIterator<String> litr = al.listIterator();
@@ -103,7 +106,9 @@ public class Solution {
         System.out.println();
 //---------------------------------------------------------------------
         UniqueChars uniqueChars = new UniqueChars();
-
+        uniqueChars.setText("jnbodsjfngvlrnfflkmsmfnknsfvkmnkn");
+        uniqueChars.calculate();
+        System.out.println(uniqueChars.toString());
     }
 
 }
